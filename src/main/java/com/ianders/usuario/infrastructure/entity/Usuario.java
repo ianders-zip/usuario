@@ -1,10 +1,7 @@
 package com.ianders.usuario.infrastructure.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -17,6 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @Entity //Para apontar pro nosso Spring que essa aqui é uma tabela do banco de dados
 @Table(name = "usuario") //Para por o nome da tabela (sempre colocar)
+@Builder
 
 public class Usuario implements UserDetails { //implements UserDetails paraImplementar essa classe do Spring Security
     //para validar esse usuário como um usuario de acesso de login e senha

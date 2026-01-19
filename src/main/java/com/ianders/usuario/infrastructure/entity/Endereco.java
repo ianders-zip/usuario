@@ -1,10 +1,7 @@
 package com.ianders.usuario.infrastructure.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
@@ -12,6 +9,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity //Para apontar pro nosso Spring que essa aqui é uma tabela do banco de dados
 @Table(name = "endereco") //Para por o nome da tabela (sempre colocar)
+@Builder
 public class Endereco {
 
     @Id
